@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090a0d">
-  <meta name="description" content="A simple user guide for MagicPlay on Android: setlists, WAV playback, track levels and MIDI actions.">
+  <meta name="description" content="A user guide for MagicPlay on Android: setlists, WAV playback, MIDI actions, Art-Net / DMX lighting and configuration backup.">
   <title>User Guide — MagicPlay</title>
   <link rel="icon" type="image/png" href="ic_launcher-playstore.png">
   <link rel="stylesheet" href="assets/site.css">
@@ -27,7 +27,7 @@
       <div class="wrap">
         <span class="eyebrow">MagicPlay for Android</span>
         <h1>User Guide</h1>
-        <p class="lead">The essentials for preparing a setlist, playing WAV backing tracks and using MIDI actions during a live performance.</p>
+        <p class="lead">Prepare a setlist, play WAV backing tracks, configure MIDI and control Art-Net / DMX lighting during a live performance.</p>
       </div>
     </section>
 
@@ -85,17 +85,29 @@
       </ol>
       <p>MagicPlay can send configured MIDI actions during track playback. Always test the messages with your equipment before a live performance.</p>
 
-      <h2>6. Before going on stage</h2>
+      <h2>6. Configure Art-Net / DMX lighting</h2>
+      <ol>
+        <li>Open Art-Net Configuration and enter the IP address of your Art-Net node and the DMX universe to use.</li>
+        <li>Open Fixture Types to define each fixture model and its DMX channels, including the function assigned to each channel.</li>
+        <li>Open Installed Fixtures to add the fixtures in your rig and assign their DMX start addresses.</li>
+        <li>Use the Scene Library to create named lighting scenes with the required channel values.</li>
+        <li>Assign a lighting scene to the relevant track event, then test it with the node and fixtures connected.</li>
+      </ol>
+      <p>Check the node IP address, universe, fixture start addresses and channel ranges carefully. Test lighting changes before relying on them during a live performance.</p>
+
+      <h2>7. Export and restore configuration</h2>
+      <p>Open Import / Export Setlist to export a JSON backup or import a previously exported backup. The backup includes track settings and events, MIDI configuration and Art-Net configuration. It does not include WAV audio files.</p>
+      <p>Keep the WAV files separately. After restoring a backup on another installation, make sure the corresponding audio files are present on the device and verify the setlist and connected equipment.</p>
+
+      <h2>8. Before going on stage</h2>
       <ul>
         <li>Import and test every WAV track.</li>
         <li>Check the setlist order and individual track levels.</li>
         <li>Connect MIDI equipment and verify the connection status.</li>
-        <li>Test every MIDI action with the instrument or processor it controls.</li>
-        <li>Keep your Android device charged and use a reliable audio connection.</li>
+        <li>Test MIDI actions with the instrument or processor they control.</li>
+        <li>Check the Art-Net node, universe, fixtures and lighting scenes.</li>
+        <li>Keep your Android device charged and use reliable audio and network connections.</li>
       </ul>
-
-      <h2>7. Current beta limitations</h2>
-      <p>Art-Net / DMX lighting control and configuration import/export are planned for a future update and are not available in this version.</p>
 
       <h2>Need help?</h2>
       <p>If something does not work, note your Android device model, Android version, the MIDI interface you are using and the steps that reproduce the problem. Visit the <a href="support/">Support page</a> or report the issue through <a href="https://github.com/jimbarba/MagicPlay/issues">GitHub Issues</a>.</p>
